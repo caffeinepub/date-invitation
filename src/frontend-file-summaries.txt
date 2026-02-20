@@ -1,0 +1,9 @@
+{
+  "frontend/src/App.tsx": "Main application component managing 3-page flow state (invitation, persuasion, success) with page transitions and hover attempt tracking for the moving \"No\" button.",
+  "frontend/src/index.css": "Global styles with warm romantic OKLCH color palette, serif typography, and custom animations including fade-in, spin-slow, and page transitions.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with romantic color tokens (rose, amber, pink), serif font family, increased border radius options, and romantic shadow effects.",
+  "frontend/src/pages/InvitationPage.tsx": "First page displaying the romantic date invitation with \"Hey Chaitanya, this is me officially asking you\" message, decorative hearts, Yes button, and the playful MovingNoButton component.",
+  "frontend/src/pages/PersuasionPage.tsx": "Second page shown after multiple hover attempts on the No button, featuring persuasive content with reasons to say yes and an animated call-to-action button.",
+  "frontend/src/pages/SuccessPage.tsx": "Third page displaying celebratory success message with animated hearts, sparkles, and emojis when user clicks Yes from any page.",
+  "frontend/src/components/MovingNoButton.tsx": "Interactive button component that moves to a random position on screen when hovered, preventing clicks and tracking hover attempts to trigger page transitions."
+}

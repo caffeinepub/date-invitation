@@ -1,0 +1,104 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add 3-page flow with playful moving 'No' button",
+  "requirements": [
+    {
+      "id": "REQ-4",
+      "summary": "Add a 'No' button that moves to a random position on the screen whenever the user hovers over it, preventing them from clicking it",
+      "acceptanceCriteria": [
+        "A 'No' button appears alongside the 'Yes' button on the landing page",
+        "When user hovers over the 'No' button, it immediately moves to a new random position on screen",
+        "The button remains visible and within viewport bounds after moving",
+        "The 'No' button cannot be clicked due to the hover behavior"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MovingNoButton.tsx",
+          "operation": "create",
+          "description": "Create a React component that renders a 'No' button with hover detection logic. On mouseenter, calculate random x/y coordinates within viewport bounds (accounting for button dimensions) and apply absolute positioning with smooth transition. Track hover attempts in component state."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render MovingNoButton component alongside the existing 'Yes' button. Update layout to accommodate both buttons with appropriate spacing. Ensure the button container allows absolute positioning for the moving button."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Expand the website from a single page to a 3-page flow with creative navigation between pages",
+      "acceptanceCriteria": [
+        "Website consists of exactly 3 distinct pages",
+        "Pages flow logically from initial invitation to final outcome",
+        "Navigation between pages feels creative and engaging (not just standard buttons)",
+        "All pages maintain the romantic visual theme established in the current design"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/InvitationPage.tsx",
+          "operation": "create",
+          "description": "Extract the current invitation content from App.tsx into Page 1. Include the message 'Hey Chaitanya, this is me officially asking you', background image from frontend/public/assets/generated/romantic-bg.dim_1920x1080.png, decorative hearts, MovingNoButton, and 'Yes' button. Maintain the existing romantic visual theme with warm colors and serif typography from index.css."
+        },
+        {
+          "path": "frontend/src/pages/PersuasionPage.tsx",
+          "operation": "create",
+          "description": "Create Page 2 with persuasive and playful content encouraging acceptance. Include creative messaging, animated elements, and a prominent 'Yes' button. Apply the romantic visual theme with background styling, warm colors from tailwind.config.js (rose, amber, pink), and elegant typography. Use fade-in animations consistent with existing design."
+        },
+        {
+          "path": "frontend/src/pages/SuccessPage.tsx",
+          "operation": "create",
+          "description": "Create Page 3 displaying a success/acceptance message with celebratory visual elements. Include romantic imagery, congratulatory text, and decorative elements like hearts or confetti. Maintain the warm color palette and serif typography from the existing theme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Implement page routing logic using React state to manage current page (1, 2, or 3). Import and conditionally render InvitationPage, PersuasionPage, or SuccessPage based on current state. Remove existing inline invitation content in favor of page components. Maintain the root layout structure and background styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Design a creative multi-page flow: Page 1 as the initial invitation with the moving 'No' button, Page 2 as a persuasive intermediate page (triggered by multiple 'No' hover attempts or creative interaction), and Page 3 as the success/acceptance page (triggered by clicking 'Yes')",
+      "acceptanceCriteria": [
+        "Page 1 displays the current invitation message with 'Yes' button and the playful moving 'No' button",
+        "Page 2 provides a creative persuasive message or playful content encouraging acceptance",
+        "Page 3 shows a success message when user clicks 'Yes' from any page",
+        "Transitions between pages are smooth and creative",
+        "User can navigate forward through the flow but the experience guides them toward clicking 'Yes'"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/usePageFlow.ts",
+          "operation": "create",
+          "description": "Create a custom hook managing page flow state (currentPage: 1 | 2 | 3), hover attempt counter, and navigation functions. Provide goToPersuasion() triggered after threshold hover attempts, goToSuccess() triggered by 'Yes' click, and page transition logic. Return current page number and navigation handlers."
+        },
+        {
+          "path": "frontend/src/components/MovingNoButton.tsx",
+          "operation": "modify",
+          "description": "Add callback prop onHoverAttempt that fires each time the button moves. Increment internal hover counter and invoke callback to notify parent component of hover attempts for triggering page transitions."
+        },
+        {
+          "path": "frontend/src/pages/InvitationPage.tsx",
+          "operation": "modify",
+          "description": "Accept navigation handler props from usePageFlow hook. Wire MovingNoButton's onHoverAttempt callback to increment hover counter. Wire 'Yes' button onClick to goToSuccess(). Implement automatic navigation to PersuasionPage after threshold hover attempts (e.g., 3-5 attempts)."
+        },
+        {
+          "path": "frontend/src/pages/PersuasionPage.tsx",
+          "operation": "modify",
+          "description": "Accept goToSuccess navigation handler prop. Wire 'Yes' button onClick to navigate to SuccessPage. Add creative transition effects when page mounts (fade-in, slide-in, or scale animations) using CSS transitions or react-spring for smooth creative transitions."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Integrate usePageFlow hook to manage page state and navigation. Pass navigation handlers (goToPersuasion, goToSuccess) as props to page components. Implement smooth page transitions using CSS transitions or animation libraries. Apply fade-out/fade-in effects or creative slide transitions when switching between pages."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS keyframes and transition classes for smooth page transitions (fade-in, fade-out, slide-in effects). Ensure transition animations respect the existing romantic theme with appropriate timing functions and durations (e.g., cubic-bezier easing)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "A 3-page interactive website to ask Chaitanya out on a date with a personal message and a playful 'No' button that moves away when hovered",
+  "architectural_notes": [
+    "Multi-page structure: page 1 (landing/message), page 2 (question with Yes/No buttons), page 3 (response page)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-landing-page-with-the-message-hey-chaitanya-this-is-me-officially-asking-you-displayed-prominently",
+      "title": "Create a landing page with the message 'Hey Chaitanya, this is me officially asking you' displayed prominently",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-call-to-action-asking-chaitanya-to-go-on-a-date",
+      "title": "Add a call-to-action asking Chaitanya to go on a date",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-romantic-elegant-visual-theme-with-warm-colors-sophisticated-typography-and-a-layout-that-feels-personal-and-heartfelt-without-being-overly-formal",
+      "title": "Design a romantic, elegant visual theme with warm colors, sophisticated typography, and a layout that feels personal and heartfelt without being overly formal",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-no-button-that-moves-to-a-random-position-on-the-screen-whenever-the-user-hovers-over-it-preventing-them-from-clicking-it",
+      "title": "Add a 'No' button that moves to a random position on the screen whenever the user hovers over it, preventing them from clicking it",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-website-from-a-single-page-to-a-3-page-flow-with-creative-navigation-between-pages",
+      "title": "Expand the website from a single page to a 3-page flow with creative navigation between pages",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-creative-multi-page-flow-page-1-as-the-initial-invitation-with-the-moving-no-button-page-2-as-a-persuasive-intermediate-page-triggered-by-multiple-no-hover-attempts-or-creative-interaction-and-page-3-as-the-success-acceptance-page-triggered-by-clicking-yes",
+      "title": "Design a creative multi-page flow: Page 1 as the initial invitation with the moving 'No' button, Page 2 as a persuasive intermediate page (triggered by multiple 'No' hover attempts or creative interaction), and Page 3 as the success/acceptance page (triggered by clicking 'Yes')",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a website with a message asking Chaitanya out on a date",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add a playful 'No' button that moves away when user hovers over it",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Expand website to 3 pages with creative flow",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Date Invitation",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

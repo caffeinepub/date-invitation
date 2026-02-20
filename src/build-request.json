@@ -1,0 +1,81 @@
+{
+  "kind": "build_request",
+  "title": "Add 3-page flow with playful moving 'No' button",
+  "projectName": "Date Invitation",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-4",
+      "text": "Add a 'No' button that moves to a random position on the screen whenever the user hovers over it, preventing them from clicking it",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "she cant click the no option it keeps on moving if she hover above it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 'No' button appears alongside the 'Yes' button on the landing page",
+        "When user hovers over the 'No' button, it immediately moves to a new random position on screen",
+        "The button remains visible and within viewport bounds after moving",
+        "The 'No' button cannot be clicked due to the hover behavior"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Expand the website from a single page to a 3-page flow with creative navigation between pages",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "the website should be of 3 pages and creative"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Website consists of exactly 3 distinct pages",
+        "Pages flow logically from initial invitation to final outcome",
+        "Navigation between pages feels creative and engaging (not just standard buttons)",
+        "All pages maintain the romantic visual theme established in the current design"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Design a creative multi-page flow: Page 1 as the initial invitation with the moving 'No' button, Page 2 as a persuasive intermediate page (triggered by multiple 'No' hover attempts or creative interaction), and Page 3 as the success/acceptance page (triggered by clicking 'Yes')",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "the website should be of 3 pages and creative"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page 1 displays the current invitation message with 'Yes' button and the playful moving 'No' button",
+        "Page 2 provides a creative persuasive message or playful content encouraging acceptance",
+        "Page 3 shows a success message when user clicks 'Yes' from any page",
+        "Transitions between pages are smooth and creative",
+        "User can navigate forward through the flow but the experience guides them toward clicking 'Yes'"
+      ]
+    }
+  ],
+  "constraints": [
+    "Maintain the existing romantic visual theme with warm colors and elegant typography",
+    "Keep the original message 'Hey Chaitanya, this is me officially asking you' on the first page",
+    "Do not modify immutable frontend paths (useInternetIdentity, useActor, main.tsx, components/ui)"
+  ],
+  "nonGoals": [
+    "Adding backend logic or data persistence",
+    "Implementing user authentication",
+    "Creating a response tracking system",
+    "Adding email or notification features"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

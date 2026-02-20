@@ -1,0 +1,67 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-no-button-that-moves-to-a-random-position-on-the-screen-whenever-the-user-hovers-over-it-preventing-them-from-clicking-it",
+      "featureTitle": "Add a 'No' button that moves to a random position on the screen whenever the user hovers over it, preventing them from clicking it",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/MovingNoButton.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-expand-the-website-from-a-single-page-to-a-3-page-flow-with-creative-navigation-between-pages",
+      "featureTitle": "Expand the website from a single page to a 3-page flow with creative navigation between pages",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/InvitationPage.tsx",
+        "frontend/src/pages/PersuasionPage.tsx",
+        "frontend/src/pages/SuccessPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-creative-multi-page-flow-page-1-as-the-initial-invitation-with-the-moving-no-button-page-2-as-a-persuasive-intermediate-page-triggered-by-multiple-no-hover-attempts-or-creative-interaction-and-page-3-as-the-success-acceptance-page-triggered-by-clicking-yes",
+      "featureTitle": "Design a creative multi-page flow: Page 1 as the initial invitation with the moving 'No' button, Page 2 as a persuasive intermediate page (triggered by multiple 'No' hover attempts or creative interaction), and Page 3 as the success/acceptance page (triggered by clicking 'Yes')",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/MovingNoButton.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/InvitationPage.tsx",
+        "frontend/src/pages/PersuasionPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

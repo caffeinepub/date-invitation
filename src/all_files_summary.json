@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend canister entry point with no implemented functionality.",
+  "feature_evidence.json": "Feature evidence report documenting three implemented features: moving 'No' button, 3-page flow navigation, and creative multi-page date invitation flow with high confidence test coverage.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of frontend source files describing the romantic date invitation app's components, pages, and styling.",
+  "frontend/index.css": "Tailwind CSS base configuration with OKLCH color variables for light and dark modes, defining neutral grayscale palette and chart colors.",
+  "frontend/index.html": "HTML entry point with 'Date Invitation' title, root div, and module script loading main.tsx.",
+  "frontend/src/App.tsx": "Main React component managing three-page state machine (invitation, persuasion, success), tracking hover attempts on 'No' button to trigger page transitions, with romantic background image and footer.",
+  "frontend/src/components/MovingNoButton.tsx": "Interactive button that repositions itself to random viewport coordinates on hover/touch, preventing clicks and notifying parent of hover attempts.",
+  "frontend/src/hooks/useActor.ts": "React hook managing ICP backend actor creation with Internet Identity authentication, invalidating dependent queries when identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login state, identity persistence, and AuthClient lifecycle with configurable options.",
+  "frontend/src/index.css": "Tailwind CSS configuration with warm romantic OKLCH color palette for light/dark modes, serif typography, and custom animations (fade-in, spin-slow, slide-in, page-transition).",
+  "frontend/src/main.tsx": "React application entry point wrapping App with QueryClientProvider and InternetIdentityProvider for state management and authentication.",
+  "frontend/src/pages/InvitationPage.tsx": "First page component displaying romantic date invitation to Chaitanya with decorative hearts, 'Yes' button, and MovingNoButton that tracks hover attempts.",
+  "frontend/src/pages/PersuasionPage.tsx": "React component for the persuasion page (page 2) that displays a playful message encouraging the user to say yes, listing benefits of the date with hearts and decorative elements, and includes a CTA button to accept.",
+  "frontend/src/pages/SuccessPage.tsx": "React component for the success page (page 3) that displays a celebratory message with animated hearts, sparkles, and party poppers when the user accepts the date invitation.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration file that extends the default theme with custom colors (using OKLCH color space), container settings, and includes plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state tracking file documenting a 3-page interactive date invitation website with existing features including a landing page, moving 'No' button, and multi-page flow architecture."
+}

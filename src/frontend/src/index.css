@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        /* Warm romantic color palette - Light Mode */
+        --background: 0.98 0.015 25;
+        --foreground: 0.25 0.08 15;
+        --card: 1 0.01 20;
+        --card-foreground: 0.25 0.08 15;
+        --popover: 1 0.01 20;
+        --popover-foreground: 0.25 0.08 15;
+        --primary: 0.55 0.18 15;
+        --primary-foreground: 0.98 0.015 25;
+        --secondary: 0.92 0.04 35;
+        --secondary-foreground: 0.35 0.12 20;
+        --muted: 0.95 0.02 30;
+        --muted-foreground: 0.50 0.06 25;
+        --accent: 0.88 0.08 40;
+        --accent-foreground: 0.30 0.10 18;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.90 0.03 28;
+        --input: 0.90 0.03 28;
+        --ring: 0.60 0.15 18;
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+    }
+
+    .dark {
+        /* Warm romantic color palette - Dark Mode */
+        --background: 0.20 0.05 15;
+        --foreground: 0.95 0.02 25;
+        --card: 0.25 0.06 18;
+        --card-foreground: 0.95 0.02 25;
+        --popover: 0.25 0.06 18;
+        --popover-foreground: 0.95 0.02 25;
+        --primary: 0.75 0.15 20;
+        --primary-foreground: 0.20 0.05 15;
+        --secondary: 0.35 0.08 22;
+        --secondary-foreground: 0.92 0.03 28;
+        --muted: 0.30 0.06 20;
+        --muted-foreground: 0.70 0.08 25;
+        --accent: 0.45 0.12 25;
+        --accent-foreground: 0.95 0.02 25;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.95 0.02 25;
+        --border: 0.35 0.06 20;
+        --input: 0.35 0.06 20;
+        --ring: 0.65 0.12 22;
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Georgia', 'Garamond', 'Times New Roman', serif;
+    }
+}
+
+@layer utilities {
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes slide-in {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 0.8s ease-out forwards;
+    }
+
+    .animate-spin-slow {
+        animation: spin-slow 3s linear infinite;
+    }
+
+    .animate-slide-in {
+        animation: slide-in 0.6s ease-out forwards;
+    }
+
+    .page-transition {
+        animation: fade-in 0.6s ease-out forwards;
+    }
+}
